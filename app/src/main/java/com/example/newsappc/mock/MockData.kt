@@ -1,5 +1,6 @@
 package com.example.newsappc.mock
 
+import com.example.newsappc.model.BigNewsModel
 import com.example.newsappc.model.FragmentModel
 import com.example.newsappc.ui.NewsFragment
 import java.util.*
@@ -9,7 +10,7 @@ object MockData {
     fun getNewsCategoryFragment(): List<FragmentModel> {
         val fragmentList = ArrayList<FragmentModel>()
 
-        repeat( getTitleList().size) { position ->
+        repeat(getTitleList().size) { position ->
             val fragment = NewsFragment()
             val fragmentModel = FragmentModel(position, fragment, getTitleList()[position])
             fragmentList.add(fragmentModel)
@@ -29,5 +30,16 @@ object MockData {
 
         return arrayTitleList
 
+    }
+
+    fun getNewsList(newsListSize: Int): List<BigNewsModel> {
+        val bigNewsList = ArrayList<BigNewsModel>()
+        repeat(newsListSize) {
+            val bigNewsModel = BigNewsModel(
+                "www.google.com",
+                "Ertelendi !"
+            )
+        }
+        return bigNewsList
     }
 }

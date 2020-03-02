@@ -1,10 +1,13 @@
 package com.example.newsappc.ui
 
 import android.os.Bundle
+import android.view.Gravity
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.newsappc.R
 import com.example.newsappc.adapter.CategoryNewsAdapter
 import com.example.newsappc.mock.MockData
+import com.example.newsappc.util.extGetDrawable
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
 class DashboardActivity : AppCompatActivity() {
@@ -20,10 +23,14 @@ class DashboardActivity : AppCompatActivity() {
         vpNewsCategory.adapter =
             CategoryNewsAdapter(
                 supportFragmentManager,
-                MockData.getNewsCategoryFragment(5)
+                MockData.getNewsCategoryFragment()
             )
 
         tabLayNewsCategory.setupWithViewPager(vpNewsCategory)
+
+      // toolbar.logo = extGetDrawable(R.drawable.newsicon)
+
+
 
     }
 }

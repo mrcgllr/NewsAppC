@@ -16,14 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme">
+            android:minHeight="?attr/actionBarSize">
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="50dp"
-                android:layout_height="45dp"
-                android:background="@drawable/newsicon"/>
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:background="@drawable/newsicon" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -31,9 +30,9 @@
             android:id="@+id/tabLayNewsCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabTextColor="@color/nonSelectedText"
+            app:tabMode="scrollable"
             app:tabSelectedTextColor="@color/colorAccent"
-            app:tabMode="scrollable" />
+            app:tabTextColor="@color/nonSelectedText" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
