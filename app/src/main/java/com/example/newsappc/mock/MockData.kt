@@ -5,12 +5,13 @@ import com.example.newsappc.ui.NewsFragment
 import java.util.*
 
 object MockData {
-    fun getNewsCategoryFragment(fragmentSize: Int): List<FragmentModel> {
+    private const val newsCategorySize = 7
+    fun getNewsCategoryFragment(): List<FragmentModel> {
         val fragmentList = ArrayList<FragmentModel>()
 
-        repeat(fragmentSize) { position ->
+        repeat( getTitleList().size) { position ->
             val fragment = NewsFragment()
-            val fragmentModel = FragmentModel(position, fragment,getFragmentTitle(position))
+            val fragmentModel = FragmentModel(position, fragment, getTitleList()[position])
             fragmentList.add(fragmentModel)
 
         }
@@ -18,13 +19,15 @@ object MockData {
         return fragmentList
     }
 
-    private fun getFragmentTitle(position: Int): String {
-       return when (position) {
-            0 ->"Anasayfa"
-            1->"Yazarlar"
-            2->"Gündem"
-            3->"Siyaset"
-            else ->"Diğer"
-        }
+    private fun getTitleList(): ArrayList<String> {
+        val arrayTitleList = ArrayList<String>()
+        arrayTitleList.add("Anasayfa")
+        arrayTitleList.add("Yazarlar")
+        arrayTitleList.add("Gündem")
+        arrayTitleList.add("Siyaset")
+        arrayTitleList.add("Teknoloji")
+
+        return arrayTitleList
+
     }
 }

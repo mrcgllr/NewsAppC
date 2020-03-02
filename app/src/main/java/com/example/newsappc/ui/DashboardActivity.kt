@@ -20,7 +20,7 @@ class DashboardActivity : AppCompatActivity() {
         vpNewsCategory.adapter =
             CategoryNewsAdapter(
                 supportFragmentManager,
-                MockData.getNewsCategoryFragment(10)
+                MockData.getNewsCategoryFragment(5)
             )
 
         tabLayNewsCategory.setupWithViewPager(vpNewsCategory)

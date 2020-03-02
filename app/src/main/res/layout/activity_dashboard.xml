@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.DashboardActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayNewsCategory"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:background="@drawable/newsicon"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayNewsCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/nonSelectedText"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabMode="scrollable" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpNewsCategory"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
 
 </LinearLayout>
