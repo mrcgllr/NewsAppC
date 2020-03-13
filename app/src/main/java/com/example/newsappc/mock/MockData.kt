@@ -53,26 +53,31 @@ object MockData {
             val bigNewsModel = NewsModel(
                 "https://i4.hurimg.com/i/hurriyet/75/900x350/5e5d7a1a18c7732484f1e05c.jpg",
                 "Ertelendi...!",
+                true,
                 NewsType.BIG_NEWS.id
             )
             val smalNewsModel = NewsModel(
                 "https://i4.hurimg.com/i/hurriyet/75/900x350/5e5d7a1a18c7732484f1e05c.jpg",
                 "Ertelendi...!",
+                true,
                 NewsType.SMALL_NEWS.id
             )
             val smalNewsModel2 = NewsModel(
                 "https://i4.hurimg.com/i/hurriyet/75/900x350/5e5d7a1a18c7732484f1e05c.jpg",
                 "Ertelendi...!",
+                false,
                 NewsType.SMALL_NEWS.id
             )
             val smalNewsModel3 = NewsModel(
                 "https://i4.hurimg.com/i/hurriyet/75/900x350/5e5d7a1a18c7732484f1e05c.jpg",
                 "Ertelendi...!",
+                false,
                 NewsType.SMALL_NEWS.id
             )
             val smalNewsModel4 = NewsModel(
                 "https://i4.hurimg.com/i/hurriyet/75/900x350/5e5d7a1a18c7732484f1e05c.jpg",
                 "Ertelendi...!",
+                true,
                 NewsType.SMALL_NEWS.id
             )
             newsList.add(adsModel)
